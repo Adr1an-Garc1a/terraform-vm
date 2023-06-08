@@ -7,25 +7,42 @@ variable "project_id" {
 #Region
 variable "region" {
   description = "region"
-  default = "us-central"
+  default = "us-central1"
 }
 
-#Zone
+#Zona
 variable "zone" {
   description = "zone"
   default = "us-central1-a"
 }
 
-#CIDR range for VPC
+#VPC
+variable "vpc_name" {
+  default = "vpc-service"
+}
+
+#Subnet
+variable "subnet_name" {
+  default ="sbn-service"
+}
+
+#Rango para VPC
 variable "ip_cidr_range" {
   default = "10.10.0.0/28"
 }
 
+#Nombre de la instancia
 variable "instance_name" {
   default = "vm-terraform"
 }
 
+#Tipo de maquina
 variable "machine_type" {
-  default = "f2-micro"
+  default = "f1-micro"
+}
+
+#Disco boot
+variable "boot_disk_image" {
+  default = "centos-7-v20230509"
 }
 
